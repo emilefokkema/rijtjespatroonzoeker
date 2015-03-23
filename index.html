@@ -1,0 +1,1816 @@
+﻿<html>
+<head>
+<title>Rijtjes</title>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<style type="text/css">
+@font-face {
+	font-family: lCode2000;
+	src: url('CODE2000.TTF') ;
+}
+body	{
+	background-color: #386285;
+	margin:8px;
+}
+.naam	{
+	margin: 0px;
+	position: relative;
+	color: #fff9ef;
+	font-size: 25px;
+	font-family: Verdana, monospace;
+	margin-left: inherit;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.toelichting	{
+	position: relative;
+	color: #fff9ef;
+	font-size: 13px;
+	font-family: Verdana, monospace;
+	margin-left: inherit;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.toelichting3	{
+	color: #184265;
+	font-size: 8px;
+	font-family: Verdana, monospace;
+}
+.toelichting2	{
+	position: absolute;
+	bottom:0px;
+	margin: inherit;
+}
+.pijltje	{
+	margin: 0px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: 'Gentium Basic', 'Gentium Plus Literacy', 'Doulos SIL Literacy', 'Nuosu SIL', 'Charis SIL Mali', 'Charis SIL', Gardiner, NewGardiner, Aegyptus, Akkadian, Aegean, 'Microsoft YaHei', 'Microsoft JhengHei', Symbola, Musica, FreeSans, FreeSerif, HanaMinA, HanaMinB, TW-Kai, TW-Sung, UnBatang, 'Bitstream Cyberbit', Quivira, 'DejaVu Sans', 'Lucida Sans Unicode', 'Arial Unicode MS', STIX, lFreeSans, lHanaMinA, lHanaMinB, lDoulosSILLiteracy, lGentiumPlusLiteracy, lNuosoSIL, lCharisSIL, lCharisSILMali, Code2000, Code2001, Code2002, lCode2000, lCode2001, unifont, lunifont, sans-serif;
+	
+}
+.cijfer	{
+	margin: 0px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: Verdana, monospace;
+	
+}
+.analyseletter	{
+	margin: 0px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.getal {
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+	font-size: 18px;
+	width: 40px;
+	height: 30px;
+}
+.kleingetal {
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+	font-size: 20px;
+	width: 20px;
+	height: 30px;
+}
+.spatie {
+	margin: 0px;
+	vertical-align: middle;
+	font-size: 20px;
+	width: 20px;
+	height: 30px;
+	display: block;
+}
+.balk {
+	margin: 0px;
+	vertical-align: middle;
+	font-size: 20px;
+	width: 100%;
+	height: 30px;
+	
+}
+.rij	{
+	margin: 0px;
+	float: left;
+	position: relative;
+	font-size: 20px;
+}
+.analysestring	{
+	margin: 0px;
+	padding: 0px;
+	font-size: 15px;
+	height: 30px;
+	font-family: Verdana, monospace;
+	font-style: italic;
+	color: #141823;
+}
+.analyse	{
+	margin: 0px;
+	float: left;
+	position: relative;
+	font-size: 10px;
+}
+.route	{
+	margin: 0px;
+	float: left;
+	position: relative;
+	font-size: 20px;
+	
+}
+.zoektocht	{
+	border-spacing: 0px;
+	margin: 5px;
+	padding: 5px;
+	display: block;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: #fff9ef;
+	box-shadow: 10px 10px 5px #103c5d;
+	position: relative;
+	
+}
+.zoektochttekst	{
+	background-color: #fff9ef;
+	font-family: Consolas,"courier new";
+	color: #141823;
+	resize: none;
+	border-style: none;
+	width: 100%;
+	height: 100%;
+	
+	
+}
+td	{
+	margin: 0px;
+	padding: 0px;
+	
+}
+table	{
+	border-spacing: 0px;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	color: inherit;
+	
+}
+tr	{
+	margin: 0px;
+	padding: 0px;
+	
+}
+.plusdiv	{
+	width: 100%;
+	font-size: 20px;
+	color: inherit;
+	height: 20px;
+}
+.plus	{
+	margin: 0px;
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+.uitvoer	{
+	background-color: #000000;
+	font-family: Consolas,"courier new";
+	font-size: 14px;
+	color: #fff9ef;
+	max-width:90%;
+	min-width:90%;
+	min-width: 300px;
+	height: 50%;
+	max-height: 400px;
+	overflow: auto;
+	display: inline;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff9ef;
+	margin: inherit;
+	position: relative;
+}
+.uitvoer3	{
+	background-color: #000000;
+	font-family: Consolas,"courier new";
+	font-size: 14px;
+	color: #fff9ef;
+	width:100%;
+	height: 100%;
+	overflow: auto;
+	border: none;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	resize: none;
+	display: none;
+}
+.uitvoer2	{
+	
+	color: #141823;
+	
+	position: relative;
+	display: inline-block;
+	margin: inherit;
+}
+.consoleextra	{
+	position: absolute;
+	top:0px; right: 0px;
+}
+.consoleextrading	{
+	font-family: Consolas,"courier new";
+	font-size: 14px;
+	color: #fff9ef;
+	cursor: pointer;
+}
+.zoektochten	{
+	color: inherit;
+	display: inline-block;
+}
+.kruisje	{
+	position: absolute;
+	top: -30px;
+	right: -25px;
+	color: #fff9ef;
+	font-size: 25px;
+	cursor: pointer;
+	text-shadow: 10px 10px 5px #103c5d;
+	font-family: Segoe UI Symbol;
+	display: none;
+}
+.zijkant	{
+	position: absolute;
+	right:-2px;
+	top: 7px;
+	display: initial;
+	color: #141823;
+}
+.zijkantding	{
+	position: relative;
+	display: block;
+	font-family: Segoe UI Symbol;
+	font-size: 30px;
+	width: 30px;
+	color: inherit;
+	cursor: pointer;
+}
+.invoer	{
+	background-color: #fff9ef;
+	font-family: Verdana, monospace;
+	font-size: 15px;
+	margin: 0px;
+	border-style: none;
+}
+.invoerknop{
+	background-color: #fff9ef;
+	font-family: Segoe UI Symbol;
+	font-weight: bold;
+	font-size: 15px;
+	margin: 0px;
+	border-style: none;
+	cursor: pointer;
+}
+.invoerformulier	{
+	background-color: #fff9ef;
+	margin: inherit;
+	display: inline;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	padding: 5px;
+	border-radius: 10px;
+}
+.regelnummer	{
+	font-family: Consolas,"courier new";
+	font-size: 10px;
+	color: #AAAAFF;
+}
+.consoleknop	{
+	cursor: pointer;
+	color: #fff9ef;
+	margin-left:10px;
+	font-family: Segoe UI Symbol;
+}
+</style>
+</head>
+<body onLoad="MYAPP.begin()">
+<a class="naam" id="naam">rijtjespatroonzoeker <i>(Beta)</i></a>
+<p class="toelichting">Geef een rijtje gehele getallen,<br> gescheiden door komma's.</p><br>
+<span class="invoerformulier"><input class="invoer" type="text" name="formule" id="veld" placeholder="1, 2, 0, 4, -4"><a class="invoerknop" onClick="knop()"><svg width="17.6" height="17.6"><circle cx="6.73" cy="6.73" r="5.13" stroke="#000000" stroke-width="1.5" fill="none" /><line x1="10.35" y1="10.35" x2="17.6" y2="17.6" style="stroke:rgb(0,0,0);stroke-width:1.5" />
+   Sorry, your browser does not support inline SVG.</svg></a></span><a class="consoleknop" id="consoleknop" onClick="consoleknop()"> (verberg console)</a><br>
+
+<div class="uitvoer2" id="uit2">
+<div class="uitvoer" id="uit" onClick="if(document.getElementById('restvanuitvoer').innerHTML==''&&document.getElementById('invoerblok').value==''){MYAPP.gaNaarInvoerBlok();}">
+	<textarea class="uitvoer3" id="invoerblok" onBlur="MYAPP.verlaatInvoerBlok()"></textarea>
+	<span><span id="restvanuitvoer" onClick="MYAPP.gaNaarInvoerBlok()">>15, 29, 56, 108, 208<br>>13, -21, 34, -55, 89<br>>52, 56, 48, 64, 32<br>>1, 3, 7, 11, 13<br>>2300, 4600, 460, 920, 92<br>>3, 12, 24, 33, 66<br>>3, 5, 7, 11, 13<br>>8, 16, 24, 36, 48<br>>68, 36, 20, 12, 8<br>>18, 6, 24, 8, 32<br>>99, 18, 36, 9, 18<br>>3, 8, 23, 68, 203<br>>144, 73, 14, 8, 236<br>>10, 45, 15, 38, 20<br>>1, 10, 37, 82, 145<br>>-2, 1, 6, 13, 22<br>>34, -21, 13, -8, 5<br>>1, 0, 1, -1, 2<br>>108, 56, 29, 15, 8<br>>1, 8, 27, 64, 125<br>>-2, 3, 27, 69, 129<br>>-2, 5, -4, 3, -6<br>>1, 4, 9, 16, 25<br>>75, 15, 25, 5, 15<br>>1, 2, 6, 24, 120<br>>183, 305, 527, 749, 961<br>>16, 22, 34, 58, 106<br>>17, 40, 61, 80, 97<br>>55, 34, 21, 13, 8<br>>259, 131, 67, 35, 19<br>>93, 74, 57, 42, 29<br>>7, 21, 14, 42, 28<br>>2, -12, -32, -58, -90<br>>0, 9, 36, 81, 144</span><span class="consoleextra" id="consoleextra"></span></span>
+</div>
+<!--<a class="kruisje"  onClick="MYAPP.kruisje()" id="kruisje">&empty;</a>-->
+<span id="zoektochten" class="zoektochten"></span>
+</div>
+<script language="JavaScript">
+var regelnummer=1;
+var consolezichtbaar=true;
+function consoleknop(){
+	if(consolezichtbaar){
+		document.getElementById("uit").style.display="none";
+		document.getElementById("consoleknop").innerHTML="&#128195;";
+	}else{
+		document.getElementById("uit").style.display="block";
+		document.getElementById("consoleknop").innerHTML="&#128195;";
+	}
+	consolezichtbaar=!consolezichtbaar;
+}
+function knop(){
+	
+	if(MYAPP.aantalzoektochten==0&&MYAPP.toelichting2.dingen.aantal==2){MYAPP.toelichting2.voegToe("<a class='toelichting3'>i</a>").voegToe("<a class='toelichting3'>l</a>");}
+	var s=document.getElementById('veld').value;
+	
+	MYAPP.zoeknaar(Weergave.alsLijst(s));
+	document.getElementById('veld').value=s;
+}
+
+function verhouding(r){
+	MYAPP.schrijf2(Weergave.verhouding(r));
+}
+var MYAPP={
+	kruisje: function(){
+		document.getElementById("zoektochten").innerHTML="";
+		document.getElementById("kruisje").style.display="none";
+	},
+	begin: function(){
+		
+		consoleknop();
+		
+		this.toelichting2=XVBeeld().voegToe("<a class='toelichting3'>e</a>").voegToe("<a class='toelichting3'>m</a>");
+		this.resultaten=new ArrayList();
+		this.begonnen=true;
+		this.gaNaarInvoerBlok();
+		this.verlaatInvoerBlok();
+		document.getElementById("uit").style.maxWidth=document.getElementById("naam").offsetWidth+"px";
+	},
+	schrijf: function(ding){
+		document.writeln(ding+"<br>");
+	},
+	schrijf2: function(ding){
+		//document.body.innerHTML+=ding+"<br>";
+		//"<a class='regelnummer'>"+(regelnummer++)+"</a> "+
+		var s=document.getElementById("restvanuitvoer").innerHTML;
+		document.getElementById("restvanuitvoer").innerHTML+=((s!=""&&s.indexOf("<br>", s.length-4)==-1)?"<br>":"")+ding+"<br>";
+		this.gaNaarInvoerBlok();
+		this.verlaatInvoerBlok()
+	},
+	schrijf3: function(ding){
+		//this.schrijf2("html tekenen...");
+		//document.getElementById("uit2").innerHTML+=ding;
+		document.getElementById("zoektochten").innerHTML+=ding;
+	},
+	zoeknaar: function(lijst){
+		var res=new Resultaat(lijst);
+		
+		var zoe1=new Zoektocht(lijst);
+		var html1string=HtmlBeeldMaker2(XZoektochtBeeld(zoe1, true).toString(), this.aantalzoektochten);
+		var tekststring=TekstBeeldMaker(XZoektochtBeeld(zoe1, true).toString()).toString();
+
+		var idstring="zoek"+this.aantalzoektochten.toString();
+		
+
+		this.schrijf3(html1string);
+		res.zoektocht=zoe1;
+		res.tekst=tekststring;
+		res.html1=document.getElementById(idstring+"span").innerHTML;
+		
+		res.html2=HtmlBeeldMaker2(XZoektochtBeeld(zoe1, false).toString(), 0);
+		this.resultaten.add(res);
+		if(this.aantalzoektochten==0){
+			
+			
+			document.body.innerHTML+="<p style='position: fixed; top:0px; left:0px; margin: 0px'>"+HtmlBeeldMaker2(this.toelichting2.toString(), 0)+"</p>";
+		}
+		var plaatsspan=document.getElementById(idstring+"tekstspan");
+		plaatsspan.style.maxWidth=(document.getElementById(idstring).offsetWidth-13)+"px";
+		plaatsspan.style.maxHeight=(document.getElementById(idstring).offsetHeight-13)+"px";
+		this.wisselUiterlijk(this.aantalzoektochten);
+		this.aantalzoektochten++;
+	},
+	wisselUiterlijk: function(n){
+		if(this.resultaten.lijst[n].uitgeklapt){
+			document.getElementById("zoek"+n+"span").innerHTML=this.resultaten.lijst[n].html2;
+			document.getElementById("zoek"+n+"zijkantding1").style.display="none";
+			document.getElementById("zoek"+n+"balk").innerHTML=this.driehoekjeRechtsSVG;
+		}else{
+			document.getElementById("zoek"+n+"span").innerHTML=this.resultaten.lijst[n].html1;
+			document.getElementById("zoek"+n+"zijkantding1").style.display="initial";
+			document.getElementById("zoek"+n+"balk").innerHTML=this.driehoekjeBenedenSVG;
+		}
+		this.resultaten.lijst[n].uitgeklapt=!this.resultaten.lijst[n].uitgeklapt;
+	},
+	maakTekst: function(n){
+		var plaats=document.getElementById("zoek"+n+"tekst");
+		var plaatsspan=document.getElementById("zoek"+n+"tekstspan");
+		plaatsspan.style.maxWidth=(document.getElementById("zoek"+n).offsetWidth-13)+"px";
+		plaatsspan.style.maxHeight=(document.getElementById("zoek"+n).offsetHeight-13)+"px";
+		plaatsspan.style.display="initial";
+		plaats.focus();
+		var res=this.resultaten.lijst[n];
+		
+		var tekst=res.tekst;
+		
+		plaats.value="\n"+tekst;
+		//MYAPP.schrijf2(TekstBeeldMaker(s.toString()).toString());
+	},
+	spaties: function(n){
+		var s="";
+		for(var i=0;i<n;i++){s+=" ";}
+		return s;
+	},
+	selecteer: function(n){
+		if(this.resultaten.lijst[n].geselecteerd){
+			document.getElementById("zoek"+n+"zijkantding0").innerHTML="a";
+		}else{
+			document.getElementById("zoek"+n+"zijkantding0").innerHTML="&#9679";
+		}
+		this.resultaten.lijst[n].selecteer();
+	},
+	verwijder: function(n){
+		document.getElementById("zoek"+n).style.display="none";
+	},
+	gaNaarInvoerBlok: function(){
+		if(!this.inInvoerBlok){
+			var s=document.getElementById("restvanuitvoer").innerHTML;
+			var sarr=s.split(/<\/a>|<br>/g);
+			var ns="";
+			for(var i=0;i<sarr.length;i++){
+				sarr[i]=sarr[i].replace(/&nbsp;/g, " ");
+				ns+=(sarr[i]!="")?(sarr[i].replace(/<[^>]*>/g, "").replace(/&gt;/g,">")+((i<sarr.length-1)?"\n":"")):"";
+			}
+			document.getElementById("restvanuitvoer").innerHTML="";
+			document.getElementById("invoerblok").style.display="initial";
+			document.getElementById("invoerblok").value=ns;
+			document.getElementById("invoerblok").focus();
+			document.getElementById("consoleextra").innerHTML="";
+			this.inInvoerBlok=true;
+		}
+	},
+	verlaatInvoerBlok: function(){
+		if(this.inInvoerBlok){
+			var s=document.getElementById("invoerblok").value;
+			var sarr=s.split(/[\n\r\v]/g);
+			var ns="";
+			var nsplus;
+			for(var i=0;i<sarr.length;i++){
+				if(sarr[i]!=""){
+					sarr[i]=sarr[i].replace(/\s/g, "&nbsp;");
+					if(sarr[i].charAt(0)==">"){
+						nsplus="<a style='background-color: "+(i%2==0?"#202a33":"#101a23")+"; display:block; margin:0px'>"+sarr[i]+"</a>";
+					}else{
+						nsplus="<a style='background-color: #000000; display:block; margin:0px'>"+sarr[i]+"</a>";
+					}
+					ns+=nsplus;
+				}
+			}
+			document.getElementById("invoerblok").value="";
+			document.getElementById("invoerblok").style.display="none";
+			document.getElementById("restvanuitvoer").innerHTML=ns;
+			ns="";
+			for(var i=0;i<sarr.length;i++){
+				if(sarr[i]!=""){
+					if(sarr[i].charAt(0)==">"){
+						nsplus="<a class='consoleextrading' onClick=\"document.getElementById('veld').value='"+sarr[i].substring(1)+"'\">[voer in]</a>"+((i<sarr.length-1)?"<br>":"");
+					}else{
+						nsplus="<a class='consoleextrading'> </a>"+((i<sarr.length-1)?"<br>":"");
+					}
+					ns+=nsplus;
+				}
+			}
+			document.getElementById("consoleextra").innerHTML=ns;
+			this.inInvoerBlok=false;
+		}
+	},
+	aantalzoektochten: 0,
+	rijSpatie: 5,
+	inInvoerBlok: false,
+	driehoekjeRechtsSVG: "<svg width='17.6'><path d='M2 2 L2 15.6 L15.6 8.8 Z' /></svg>",
+	driehoekjeBenedenSVG: "<svg width='17.6'><path d='M15.6 2 L2 2 L8.8 15.6 Z' /></svg>",
+	kruisjeSVG: "<svg width='17.6' height='17.6'><line x1='2' y1='2' x2='15.6' y2='15.6' style='stroke:#141823;stroke-width:1' /><line x1='2' y1='15.6' x2='15.6' y2='2' style='stroke:#141823;stroke-width:1' />Sorry, your browser does not support inline SVG.</svg>",
+	minnetjeSVG: "<svg width='17.6' height='17.6'><rect x='2' y='2' width='13.6' height='13.6' style='stroke:#141823;stroke-width:1;fill:none' /><line x1='5' y1='8.8' x2='12.6' y2='8.8' style='stroke:#141823;stroke-width:1'/><line x1='8.8' y1='15.6' x2='8.8' y2='17.6' style='stroke:#141823;stroke-width:1'/>Sorry, your browser does not support inline SVG.</svg>",
+	plusjeSVG: "<svg width='17.6' height='17.6'><rect x='2' y='2' width='13.6' height='13.6' style='stroke:#141823;stroke-width:1;fill:none' /><line x1='5' y1='8.8' x2='12.6' y2='8.8' style='stroke:#141823;stroke-width:1'/><line x1='8.8' y1='5' x2='8.8' y2='12.6' style='stroke:#141823;stroke-width:1'/><line x1='15.6' y1='8.8' x2='17.6' y2='8.8' style='stroke:#141823;stroke-width:1'/>Sorry, your browser does not support inline SVG.</svg>"
+};
+
+var IntArr=function(n){
+	var arr=[];
+	for(var i=0;i<n;i++){
+		arr[i]=0;
+	}
+	return arr;
+};
+var StringArr=function(n){
+	var arr=[];
+	for(var i=0;i<n;i++){
+		arr[i]="";
+	}
+	return arr;
+};
+var ArrayList=function(){
+	this.lijst=[];
+	this.aantal=0;
+};
+ArrayList.prototype.add=function(n){
+	this.lijst[this.aantal++]=n;
+};
+ArrayList.prototype.toArray=function(lijst){
+	for(var i=0;i<this.lijst.length;i++){
+		lijst[i]=this.lijst[i];
+	}
+	return lijst;
+};
+
+var Weergave={
+	priemen:[2, 3, 5, 7, 11, 13, 17, 19, 23],
+	isPriem: function(n){
+		return this.priemen.indexOf(n)!=-1;
+	},
+	lijststring: function(lijst){
+		s="";
+		for(var i=0;i<lijst.length;i++){
+			s+=lijst[i]+((i<lijst.length-1)?", ":"");
+		}
+		return s;
+	},
+	alsLijst: function(lijstString){
+		var getallen=lijstString.match(/-?\d+/g);
+		if(getallen==null){return [];}
+		var lijst=new IntArr(getallen.length);
+		for(var i=0;i<getallen.length;i++){
+			lijst[i]=parseInt(getallen[i].trim());
+		}
+		return lijst;
+	},
+	schrijfLijst: function(lijst){
+		MYAPP.schrijf2(this.lijststring(lijst));
+	},
+	schrijfArrayList: function(al){
+		this.schrijfLijst(al.lijst);
+	},
+	representatie: function(basis, getal){
+		var lengte=1;
+		while(Math.pow(basis, lengte)<=getal){lengte++;}
+		var repr=new IntArr(lengte);
+		var tot=0;
+		var positie=lengte-1;
+		while(tot<getal){
+			while(tot+Math.pow(basis, positie)<=getal){
+				tot+=Math.pow(basis, positie);
+				repr[positie]++;
+			}
+			positie--;
+		}
+		return repr;
+	},
+	bevatnul: function(lijst){
+		for(var i=0; i<lijst.length;i++){
+			if(lijst[i]==0){return true;}
+		}
+		return false;
+	},
+	isheel: function(r){
+		return r==Math.floor(r);
+	},
+	stukken: function(s){
+		var st=new ArrayList();
+		var sb="";
+		var diep=0;
+		for(var i=0;i<s.length;i++){
+			var c=s.charAt(i);
+			if(c==")"){
+				diep--;
+				if(diep==0){
+					st.add(sb);
+					sb="";
+				}
+			}
+			if(diep>0){sb=sb+c;}
+			if(c=="("){diep++;}
+		}
+		return st.toArray(new StringArr(st.lijst.length));
+		
+	},
+	zonderHaakjes: function(s){
+		var sb="";
+		var diep=0;
+		for(var i=0;i<s.length;i++){
+			var c=s.charAt(i);
+			if(diep==0){sb=sb+c;}
+			if(c=="("){diep++;}
+			if(c==")"){diep--;}
+		}
+		return sb;
+	},
+	verhouding: function(r){
+		if(this.isheel(r)){return r;}
+		else{
+			var product;
+			var r1=r;
+			var noemer=1;
+			var hoeveel;
+			for(var i=1;i<70;i++){
+				product=1;
+				hoeveel=this.representatie(4, i);
+				for(var j=0;j<hoeveel.length;j++){product*=Math.pow(this.priemen[j], hoeveel[j]);}
+				if(this.isheel(r1*product)){
+					r1*=product;
+					noemer*=product;
+					break;
+				}
+			}
+			return r1+"/"+noemer;
+			
+		}
+	},
+	verhoudingenlijst: function(lijst){
+		var v=new IntArr(lijst.length-1);
+		for(var i=1;i<lijst.length;i++){
+			v[i-1]=lijst[i]/lijst[i-1];
+		}
+		return v;
+	},
+	isconstant: function(lijst){
+		if(lijst.length==1){return true;}
+		var b=true;
+		for(var i=1;i<lijst.length;i++){
+			if(lijst[i]!=lijst[i-1]){b=false;}
+		}
+		return b;
+	},
+	verschillijst: function(lijst){
+		var vl=new IntArr(lijst.length-1);
+		for(var i=0;i<lijst.length;i++){
+			vl[i-1]=lijst[i]-lijst[i-1];
+		}
+		return vl;
+	},
+	evenonevenlijst: function(lijst){
+		var mod=lijst.length%2;
+		var evenoneven;
+		if(mod==0){
+			evenoneven=new IntArr(lijst.length/2);
+			for(var i=0;i<lijst.length/2;i++){
+				evenoneven[i]=lijst[2*i];
+			}
+		}else{
+			evenoneven=new IntArr((lijst.length-1)/2);
+			for(var i=0;i<(lijst.length-1)/2;i++){
+				evenoneven[i]=lijst[1+2*i];
+			}
+		}
+		return evenoneven;
+	},
+	imin: function(string){
+		var patt=new RegExp("[0123456789]");
+		var im=0;
+		for(var i=0;i<string.length;i++){
+			var terug=0;
+			if(patt.test(string.charAt(i))){
+				terug=parseInt(string.charAt(i));
+			}else{
+				terug=0;
+			}
+		if(terug>=im){im=terug;}
+		}
+		return im;
+	}
+};
+
+var StringBuilder=function(s){
+	this.string=s;
+};
+StringBuilder.prototype.setCharAt=function(i, c){
+	var s=this.string;
+	this.string=s.substring(0,i)+c+s.substring(i+1);
+};
+StringBuilder.prototype.length=function(){
+	return this.string.length;
+};
+StringBuilder.prototype.setLength=function(l){
+	
+	while(this.string.length<l){this.string+=" ";}
+	
+};
+StringBuilder.prototype.toString=function(){
+	return this.string;
+};
+
+var Beeld=function(){
+	this.regels=new ArrayList();
+	this.brdt=0;
+};
+Beeld.prototype.zetNeer=function(l, t, s){
+	while(this.hoogte()<t+1){this.regels.add(new StringBuilder(""));}
+	var b=l+s.length;
+	this.regel(t).setLength(b);
+	if(b>=this.brdt){this.brdt=b;}
+	for(var i=0;i<s.length;i++){
+		if(l+i>=0){this.regel(t).setCharAt(l+i, s.charAt(i));}
+	}
+	return this;
+};
+Beeld.prototype.zetBeeldNeer=function(l, t, beeld){
+	for(var i=0;i<beeld.hoogte();i++){
+		if(t+i>=0){
+			this.zetNeer(l, t+i, beeld.regel(i).toString());
+		}
+	}
+	return this;
+};
+Beeld.prototype.hoogte=function(){
+	return this.regels.lijst.length;
+};
+Beeld.prototype.breedte=function(){
+	return this.brdt;
+};
+Beeld.prototype.regel=function(i){
+	return this.regels.lijst[i];
+};
+Beeld.prototype.toString=function(){
+	var s="";
+	for(var i=0;i<this.hoogte();i++){
+		s+=this.regel(i).toString()+"\n";
+		//s+=this.regel(i).toString().replace(/\s/g,"&nbsp;")+"<br>";
+	}
+	return s;
+};
+
+var Suggestie=function(args){
+	
+	if(MYAPP.begonnen&&MYAPP.aantalzoektochten==0&&MYAPP.toelichting2.dingen.aantal==10){MYAPP.toelichting2.voegToe("<a class='toelichting3'>e</a>").voegToe("<a class='toelichting3'>m</a>");}
+	if(args.length==2){
+		this.totaal=args[0];
+		this.formule=args[1];
+	}else{
+		this.totaal=args[0];
+		this.formule=args[0].toString();
+	}
+	this.enkelvoudig=(args[0]>=0);
+	this.soortvan=false;
+};
+Suggestie.prototype.toString=function(){
+	return this.formule+" = "+(this.soortvan?"(soort van) ":"")+this.totaal.toString();
+};
+Suggestie.prototype.geeftotaal=function(){
+	return this.totaal;
+};
+Suggestie.prototype.geefstring=function(){
+	return this.formule;
+};
+Suggestie.prototype.issoortvan=function(){
+	return this.soortvan;
+};
+Suggestie.prototype.isenkelvoudig=function(){
+	return this.enkelvoudig;
+};
+Suggestie.prototype.nietenkelvoudig=function(){
+	this.enkelvoudig=false;
+};
+Suggestie.prototype.soortVan=function(){
+	this.soortvan=true;
+	//document.writeln("a");
+};
+Suggestie.prototype.doeplus=function(args){
+	if(args.length==3){
+		var min=false;
+		var ns=args[1];
+		if(args[1].charAt(0)=="-"){
+			ns=args[1].substring(1);
+			min=true;
+		}
+		var verbinding=min?" - ":" + ";
+		this.formule=args[2]?this.formule+verbinding+ns:args[1]+" + "+this.formule;
+		this.totaal+=args[0];
+		this.enkelvoudig=false;
+	}
+	else if(args.length==2){
+		if(typeof args[1]==='boolean'){
+			this.doeplus([args[0], args[0].toString(), args[1]]);
+		}else{
+			this.doeplus([args[0], args[1], true]);
+		}
+	}
+	else if(args.length==1){
+		this.doeplus([args[0], true]);
+	}
+};
+Suggestie.prototype.negatief=function(){
+	this.formule="-"+(!this.enkelvoudig?"("+this.formule+")":this.formule);
+	this.totaal=-this.totaal;
+	this.enkelvoudig=false;
+};
+Suggestie.prototype.doekeer=function(r){
+	var rs=Weergave.verhouding(r);
+	this.formule=((r<0||!Weergave.isheel(r))?"("+rs+")":rs)+"*"+(!this.enkelvoudig?"("+this.formule+")":this.formule);
+	if(!Weergave.isheel(r*this.totaal)){this.soortvan=true;}
+	this.totaal=Math.floor(r*this.totaal);
+	this.enkelvoudig=true;
+};
+Suggestie.prototype.voegtoe=function(s){
+	this.formule=this.formule+" + "+(s.isenkelvoudig()?s.formule:"("+s.formule+")");
+	this.totaal+=s.totaal;
+	if(s.issoortvan()){this.soortVan();}
+	this.enkelvoudig=false;
+};
+
+var Variant=function(lijst, voorwaarde){
+	this.lijst=new IntArr(lijst.length);
+	for(var i=0;i<lijst.length;i++){this.lijst[i]=lijst[i];}
+	this.teVergelijkens=voorwaarde.split("=");
+	/*var imin=0;
+	var patt=new RegExp("[0123456789]");
+	for(var i=0;i<voorwaarde.length;i++){
+		var terug=0;
+		if(patt.test(voorwaarde.charAt(i))){
+			terug=parseInt(voorwaarde.charAt(i));
+		}else{
+			terug=0;
+		}
+		if(terug>=imin){imin=terug;}
+	}*/
+	this.imin=Weergave.imin(voorwaarde);
+};
+Variant.prototype.falsifieer=function(){
+	if(this.lijst.length<this.imin+1){return false;}
+	for(var i=this.imin;i<=this.lijst.length-1;i++){
+		if(this.falsifieerVoor(i)==false){return false;}
+	}
+	return true;
+};
+Variant.prototype.falsifieerVoor=function(i){
+	return this.evalueer([this.teVergelijkens[0], i])==this.evalueer([this.teVergelijkens[1], i]);
+};
+Variant.prototype.evalueer=function(args){
+	if(typeof args[1]==='boolean'){
+		return this.evalueer([args[0], this.lijst.length-1]);
+	}else{
+		var zonderhaakjes=Weergave.zonderHaakjes(args[0]);
+		var stukken=Weergave.stukken(args[0]);
+		var stukaandebeurt=0;
+		var totaal=0;
+		var termen=zonderhaakjes.split(new RegExp("[+-]"));
+		var teken=new IntArr(termen.length);
+		var j=0;
+		teken[0]=1;
+		for(var i=0;i<zonderhaakjes.length;i++){
+			var c=zonderhaakjes.charAt(i);
+			if(c=="+"){teken[++j]=1;}
+			if(c=="-"){teken[++j]=-1;}
+		}
+		for(var i=0;i<termen.length;i++){
+			if(termen[i]!=""){
+				var subtotaal=1;
+				var factoren=termen[i].split(new RegExp("[*/]"));
+				var macht=new IntArr(factoren.length);
+				j=0;
+				macht[0]=1;
+				for(var k=0;k<termen[i].length;k++){
+					var c=termen[i].charAt(k);
+					if(c=="*"){macht[++j]=1;}
+					if(c=="/"){macht[++j]=-1;}
+				}
+				for(var k=0;k<factoren.length;k++){
+					var x;
+					if(factoren[k]!="("){
+						x=this.lijst[args[1]-parseInt(factoren[k])];
+						//x=parseInt(factoren[k]);
+					}
+					else{
+						x=this.evalueer([stukken[stukaandebeurt++], args[1]]);
+					}
+					if(macht[k]==1){
+						subtotaal*=x;
+					}else{
+						subtotaal/=x;
+					}
+				}
+				totaal+=subtotaal*teken[i];
+			}
+		}
+		
+		return totaal;
+	}
+};
+
+var Mogelijkheid=function(args){
+	this.lijst=args[0];
+	if(args[0].length>0){this.s=new Suggestie([args[0][args[0].length-1]]);}else{this.s=new Suggestie([42]);}
+	this.commentaar="";
+	this.extracommentaar="[extra commentaar]";
+	this.extracommentaarstring="[extra commentaar]";
+	if(args.length==6){
+		this.v=new Variant(args[0], args[1]);
+		this.interessant=(!(Weergave.bevatnul(args[0])&&(!args[5])))&&this.v.falsifieer();
+		if(this.interessant){
+			this.commentaar=args[2];
+			this.extracommentaar=(args[3]=="")?"":this.maakExtraCommentaar(args[3], this.v);
+			this.extracommentaarstring=(args[3]=="")?"":this.maakExtraCommentaarString(args[3], this.v);
+			this.pasSuggestieAan(args[4], this.v);
+		}
+	}
+	
+};
+Mogelijkheid.prototype.maakExtraCommentaar=function(extracommentaarString, v){
+	var ec=XHBeeld().voegSpatieToe();
+	var aantalPlaatsenNaarRechts=Weergave.imin(extracommentaarString.substring(1))-1;
+	for(var i=0;i<aantalPlaatsenNaarRechts;i++){
+		ec.voegSpatieToe().voegSpatieToe();
+	}
+	var delen=extracommentaarString.split(",");
+	for(var i=Weergave.imin(delen[delen.length-1].substring(1));i<this.lijst.length;i++){
+		var string=delen[delen.length-1].charAt(0);
+		var getal=(string=="*")?Weergave.verhouding(v.evalueer([delen[delen.length-1].substring(1), i])):v.evalueer([delen[delen.length-1].substring(1), i]);
+		string+=getal;
+		if(delen.length==1){
+			ec.voegToe(XVBeeld().voegPijltjeToe().voegGetalToe(string, false).toString());
+		}else{
+			
+		}
+	}
+	
+	return ec.toString();
+};
+Mogelijkheid.prototype.maakExtraCommentaarString=function(extracommentaarString, v){
+	var s=MYAPP.spaties(Math.floor(MYAPP.rijSpatie/2));
+	for(var i=0;i<Weergave.imin(extracommentaarString.substring(1))-1;i++){
+		s+=MYAPP.spaties(MYAPP.rijSpatie);
+	}
+	var delen=extracommentaarString.split(",");
+	for(var i=Weergave.imin(delen[delen.length-1].substring(1));i<this.lijst.length;i++){
+		var string=delen[delen.length-1].charAt(0);
+		var getal=(string=="*")?Weergave.verhouding(v.evalueer([delen[delen.length-1].substring(1), i])):v.evalueer([delen[delen.length-1].substring(1), i]);
+		string+=getal;
+		if(delen.length>1){string=delen[0]+string;}
+		s+=string+MYAPP.spaties(MYAPP.rijSpatie-string.length);
+	}
+	return s;
+};
+Mogelijkheid.prototype.pasSuggestieAan=function(suggestieInstructie, v){
+	var stappen=suggestieInstructie.split(",");
+	for(var i=0;i<stappen.length;i++){
+		if(stappen[i]=="n"){this.s.negatief();}
+		if(stappen[i]=="ne"){this.s.nietenkelvoudig();}
+		if(stappen[i].charAt(0)=="s"){
+			var wat=stappen[i].substring(1);
+			this.s=new Suggestie([v.evalueer([wat, true])]);
+		}
+		if(stappen[i].charAt(0)=="+"){
+			var wat=stappen[i].substring(1);
+			if(wat.charAt(0)=="f"){
+				this.s.doeplus([v.evalueer([wat.substring(1), true]), false]);
+			}else{
+				this.s.doeplus([v.evalueer([wat, true])]);
+			}
+		}
+		if(stappen[i].charAt(0)=="*"){
+			var wat=stappen[i].substring(1);
+			this.s.doekeer(v.evalueer([wat, true]));
+		}
+	}
+};
+Mogelijkheid.prototype.geefcommentaar=function(){
+	return this.commentaar;
+};
+Mogelijkheid.prototype.geefextracommentaar=function(){
+	return this.extracommentaar;
+};
+Mogelijkheid.prototype.geefextracommentaarstring=function(){
+	return this.extracommentaarstring;
+};
+Mogelijkheid.prototype.isinteressant=function(){
+	return this.interessant;
+};
+Mogelijkheid.prototype.geefsuggestie=function(){
+	return this.s;
+};
+Mogelijkheid.prototype.geefsuggestietotaal=function(){
+	return this.s.geeftotaal();
+};
+Mogelijkheid.prototype.geefsuggestiestring=function(){
+	return this.s.geefstring();
+};
+
+var Pluskeer=function(lijst){
+	Mogelijkheid.call(this, [lijst]);
+	this.interessant=lijst.length>4&&!Weergave.bevatnul(lijst);
+	var interessant1=false;
+	var interessant2=false;
+	var pluslijst1, pluslijst2;
+	if(this.interessant){
+		pluslijst1=new IntArr(Math.floor(lijst.length/2));
+		pluslijst2=new IntArr(Math.floor((lijst.length-1)/2));
+		for(var i=0;i<Math.floor(lijst.length/2);i++){
+			pluslijst1[i]=lijst[2*i+1]-lijst[2*i];
+		}
+		for(var i=0;i<Math.floor((lijst.length-1)/2);i++){
+			pluslijst2[i]=lijst[2*i+2]-lijst[2*i+1];
+		}
+		//MYAPP.schrijf2("pluslijst1: "+Weergave.lijststring(pluslijst1));
+		//MYAPP.schrijf2("pluslijst2: "+Weergave.lijststring(pluslijst2));
+		interessant1=Weergave.isconstant(pluslijst1);
+		interessant2=Weergave.isconstant(pluslijst2);
+		if(interessant1){
+			//MYAPP.schrijf2("interessant1.");
+			for(var i=4;i<lijst.length;i+=2){
+				if(lijst[i]!=0&&lijst[i-1]!=0&&lijst[i-2]!=0&&lijst[i-3]!=0){
+					if(lijst[i]/lijst[i-1]!=lijst[i-2]/lijst[i-3]){interessant1=false;}
+				}
+			}
+			//MYAPP.schrijf2("interessant1: "+interessant1);
+		}
+		if(interessant2){
+			//MYAPP.schrijf2("interessant2.");
+			for(var i=3;i<lijst.length;i+=2){
+				if(lijst[i]!=0&&lijst[i-1]!=0&&lijst[i-2]!=0&&lijst[i-3]!=0){
+					if(lijst[i]/lijst[i-1]!=lijst[i-2]/lijst[i-3]){interessant2=false;}
+				}
+			}
+			//MYAPP.schrijf2("interessant2: "+interessant2);
+		}
+		if(interessant1){
+			var r=lijst[2]/lijst[1];
+			this.commentaar="Plus "+pluslijst1[0]+", keer "+Weergave.verhouding(r)+"...";
+			if(lijst.length%2==0){
+				this.s.doekeer(r);
+			}else{
+				this.s.doeplus([pluslijst1[0]]);
+			}
+		}
+		if(interessant2){
+			var r=lijst[1]/lijst[0];
+			this.commentaar="Keer "+Weergave.verhouding(r)+", plus "+pluslijst2[0]+"...";
+			if(lijst.length%2==0){
+				this.s.doeplus([pluslijst2[0]]);
+			}else{
+				this.s.doekeer(r);
+			}
+		}
+		this.interessant=interessant1||interessant2;
+	}
+	//this.commentaar="Pluskeer";
+	this.extracommentaar="[extra commentaar pluskeer]";
+};
+Pluskeer.prototype=Object.create(Mogelijkheid.prototype);
+
+var Priemen=function(lijst){
+	Mogelijkheid.call(this, [lijst]);
+	this.interessant=false;
+	if(lijst.length>4){
+		var indexEerstePriem=0;
+		for(i=0;i<Weergave.priemen.length;i++){
+			if(Weergave.priemen[i]==lijst[0]){
+				this.interessant=true;indexEerstePriem=i;
+			}
+			if(this.interessant&&i<indexEerstePriem+lijst.length&&Weergave.priemen[i]!=lijst[i-indexEerstePriem]){this.interessant=false;}
+		}
+		if(indexEerstePriem+lijst.length>=Weergave.priemen.length){this.interessant=false;}
+		if(this.interessant){
+			this.commentaar="Priemgetallen.";
+			this.s=new Suggestie([Weergave.priemen[indexEerstePriem+lijst.length]]);
+		}
+	}
+	
+};
+Priemen.prototype=Object.create(Mogelijkheid.prototype);
+
+var Enkel=function(lijst){
+	Mogelijkheid.call(this, [lijst]);
+	this.interessant=false;
+	if(lijst.length==1){
+		this.interessant=true;
+		this.commentaar="Maar één";
+		this.s=new Suggestie([lijst[0]]);
+	}
+	else if(lijst.length==0){
+		this.interessant=true;
+		this.commentaar="Tweeënveertig."
+		this.s=new Suggestie([42]);
+	}
+};
+Enkel.prototype=Object.create(Mogelijkheid.prototype);
+
+var Rij=function(lijst){
+	
+	if(MYAPP.begonnen&&MYAPP.aantalzoektochten==0&&MYAPP.toelichting2.dingen.aantal==8){MYAPP.toelichting2.voegToe("<a class='toelichting3'>k</a>").voegToe("<a class='toelichting3'>k</a>");}
+	this.lijst=lijst;
+	this.zeker=false;
+	this.mogelijkheden=new ArrayList();
+	this.mogelijkheden.add(new Enkel(lijst));
+	this.mogelijkheden.add(new Priemen(lijst));
+	this.voegMogelijkheidToe("1=0", "Constant.", "", "ne", true);
+	this.voegMogelijkheidToe("2=0", "Alternerend.", "", "s1", true);
+	this.voegMogelijkheidToe("1/2=0/1", "Exponentieel.", "*0/1", "*0/1", false);
+	this.voegMogelijkheidToe("2/3=0/1", "Alternerend exponentieel.", "*0/1", "*1/2", false);
+	this.voegMogelijkheidToe("1/2-2/3=0/1-1/2", "Faculteit.", "*0/1", "*0/1+0/1-1/2", false);
+	this.voegMogelijkheidToe("2+1=0", "Fibonacci", "", "s1,+0", true);
+	this.voegMogelijkheidToe("2-1=0", "Omgekeerd Fibonacci.", "", "s1,+-0", true);
+	this.voegMogelijkheidToe("1/(2+3)=0/(1+2)", "Fibonacci extra.", "(+),*0/(1+2)", "s1,+0,*0/(1+2)", false);
+	this.mogelijkheden.add(new Pluskeer(lijst));
+
+	for(var i=0;i<this.mogelijkheden.lijst.length;i++){
+		if(this.mogelijkheden.lijst[i].isinteressant()){
+			this.zeker=true;
+			this.s=this.mogelijkheden.lijst[i].geefsuggestie();
+			break;
+		}
+	}
+	if(!this.zeker&&lijst.length>0){
+		this.s=new Suggestie([lijst[lijst.length-1]]);
+	}
+};
+Rij.prototype.voegMogelijkheidToe=function(voorwaarde, commentaar, extracommentaarString, suggestieInstructie, nulmag){
+	
+	if(MYAPP.begonnen&&MYAPP.aantalzoektochten==0&&MYAPP.toelichting2.dingen.aantal==12){MYAPP.toelichting2.voegToe("<a class='toelichting3'>a</a>");}
+	var mogelijkheid=new Mogelijkheid([this.lijst, voorwaarde, commentaar, extracommentaarString, suggestieInstructie, nulmag]);
+	
+	this.mogelijkheden.add(mogelijkheid);
+};
+Rij.prototype.elementen=function(){
+	return this.lijst;
+};
+Rij.prototype.iszeker=function(){
+	return this.zeker;
+};
+Rij.prototype.suggestie=function(){
+	return this.s;
+};
+Rij.prototype.geefAnalyseString=function(){
+	var s="";
+	for(var i=0;i<this.mogelijkheden.lijst.length;i++){
+		if(this.mogelijkheden.lijst[i].isinteressant()){
+			s=s+this.mogelijkheden.lijst[i].geefcommentaar();
+			break;
+		}
+	}
+	return s;
+};
+Rij.prototype.geefextraanalyse=function(){
+	var s="";
+	for(var i=0;i<this.mogelijkheden.lijst.length;i++){
+		if(this.mogelijkheden.lijst[i].isinteressant()){
+			s=s+this.mogelijkheden.lijst[i].geefextracommentaar();
+			break;
+		}
+	}
+	return s;
+};
+Rij.prototype.geefextraanalysestring=function(){
+	var s="";
+	for(var i=0;i<this.mogelijkheden.lijst.length;i++){
+		if(this.mogelijkheden.lijst[i].isinteressant()){
+			s=s+this.mogelijkheden.lijst[i].geefextracommentaarstring();
+			break;
+		}
+	}
+	return s;
+};
+
+var Analyse=function(lijst1){
+	var lijst=new IntArr(lijst1.length);
+	for(var i=0;i<lijst1.length;i++){lijst[i]=lijst1[i];}
+	this.rijen=new ArrayList();
+	this.klaar=false;
+	var verschillen;
+	var i=0;
+	var rij;
+	while(lijst.length>1&&!this.klaar){
+		verschillen=Weergave.verschillijst(lijst);
+		rij=new Rij(verschillen);
+		this.rijen.add(rij);
+		if(i==0){this.s=rij.suggestie();}else{this.s.voegtoe(rij.suggestie());}
+		if(rij.iszeker()){this.klaar=true;}
+		lijst=verschillen;
+		i++;
+	}
+	
+};
+Analyse.prototype.geefsuggestie=function(){
+	return this.s;
+};
+Analyse.prototype.geefRijen=function(){
+	return this.rijen;
+};
+Analyse.prototype.isklaar=function(){
+	return this.klaar;
+};
+
+var Route=function(lijst){
+	
+	if(MYAPP.begonnen&&MYAPP.aantalzoektochten==0&&MYAPP.toelichting2.dingen.aantal==6){MYAPP.toelichting2.voegToe("<a class='toelichting3'>f</a>").voegToe("<a class='toelichting3'>o</a>");}
+	this.rij0=new Rij(lijst);
+	this.verschilanalyse=new Analyse(lijst);
+	this.s=new Rij(lijst).suggestie();
+	if(!this.rij0.iszeker()){this.s.voegtoe(this.verschilanalyse.geefsuggestie());}
+};
+Route.prototype.geefrij0=function(){
+	return this.rij0;
+};
+Route.prototype.geefBeginSuggestie=function(){
+	return this.rij0.suggestie();
+};
+Route.prototype.geefSuggestie=function(){
+	return this.s;
+};
+Route.prototype.isKlaar=function(){
+	return this.isAnalyseOverbodig()||this.verschilanalyse.isklaar();
+};
+Route.prototype.geefVerschilanalyse=function(){
+	return this.verschilanalyse;
+};
+Route.prototype.isAnalyseOverbodig=function(){
+	return this.rij0.iszeker();
+};
+
+var Zoektocht=function(lijst){
+	
+	if(MYAPP.begonnen&&MYAPP.aantalzoektochten==0&&MYAPP.toelichting2.dingen.aantal==4){MYAPP.toelichting2.voegToe("<a class='toelichting3'>e</a>").voegToe("<a class='toelichting3'> </a>");}
+	
+	this.route1=new Route(lijst);
+	this.route2=new Route(Weergave.evenonevenlijst(lijst));
+	this.afbuiging=null;
+	this.lengte=lijst.length;
+	this.s=new Rij(lijst).suggestie();
+	var klaar=this.route1.isAnalyseOverbodig();
+	if(this.lengte>=6&&!klaar&&this.route2.isKlaar()){
+		this.afbuiging=this.route2;
+		this.s=this.route2.geefSuggestie();
+		klaar=true;
+	}
+	if(!klaar){this.s=this.route1.geefSuggestie();}
+};
+Zoektocht.prototype.geefRoute1=function(){
+	return this.route1;
+};
+Zoektocht.prototype.geefAfbuiging=function(){
+	return this.afbuiging;
+};
+Zoektocht.prototype.geefSuggestie=function(){
+	return this.s;
+}
+Zoektocht.prototype.geefLengte=function(){
+	return this.lengte;
+};
+//-----------------------------------------------------------------
+var Resultaat=function(lijst){
+	this.geselecteerd=false;
+	this.uitgeklapt=true;
+	this.lijst=lijst;
+	this.html1="";
+	this.html2="";
+	this.tekst="";
+	this.zoektocht=null;
+};
+Resultaat.prototype.selecteer=function(){
+	this.geselecteerd=!this.geselecteerd;
+};
+//-----------------------------------------------------------------
+
+var XmlBeeldMakerStatisch={
+	SPATIE: "<spatie />",
+	PIJLTJE: "<pijltje />",
+	GEENPIJLTJE: "<geenpijltje />",
+	SPATIE: "<spatie />"
+};
+var XmlBeeldMaker=function(soort, omsluiting, args){
+	if(soort==""){
+		this.dingen=new ArrayList();
+		this.omsluiting=omsluiting;
+	}
+	else if(soort=="string"){
+		XmlBeeldMaker.call(this, "", omsluiting, []);
+		this.voegEigenschapToe("waarde", args[0]);
+		this.voegEigenschapToe("analyse", args[1]);
+	}
+	else if(soort=="getal"){
+		XmlBeeldMaker.call(this, "", omsluiting, []);
+		if(typeof args[0]=="string"){
+			this.voegEigenschapToe("waarde", args[0]);
+		}else{
+			this.voegEigenschapToe("waarde", ((args[1]&&args[0]>=0)?"+":"")+args[0]);
+		}
+		//if(args.length==2){this.voegEigenschapToe("verschil", args[1]);}
+		//this.voegEigenschapToe("klein", args[0]>99);
+	}
+	else if(soort=="rij"){
+		XmlBeeldMaker.call(this, "", omsluiting, []);
+		var lijst=args[0].elementen();
+		var analysestring=args[0].geefAnalyseString();
+		var xml=XHBeeld();
+		if(args[1]){
+			for(var i=0;i<lijst.length;i++){
+				xml.voegToe(XVBeeld().voegPijltjeToe().voegGetalToe(lijst[i], true).toString());
+			}
+			xml.voegToe(XVBeeld().voegSpatieToe().voegSpatieToe());
+			xml.voegToe(XVBeeld().voegGeenPijltjeToe().voegStringToe(analysestring, true).toString());
+		}else{
+			for(var i=0;i<lijst.length;i++){
+				xml.voegGetalToe(lijst[i], false);
+			}
+			xml.voegSpatieToe();
+			xml.voegStringToe(analysestring, true);
+		}
+		xml.voegSpatieToe();
+		this.voegToe(xml.toString());
+		this.voegEigenschapToe("zeker",args[0].iszeker());
+		this.voegEigenschapToe("lengte", lijst.length);
+		this.voegEigenschapToe("lijst", Weergave.lijststring(lijst));
+	}
+	else if(soort=="analyse"){
+		XmlBeeldMaker.call(this, "", omsluiting, []);
+		var rijen=args[0].geefRijen();
+		var xml=XVBeeld();
+		for(var i=0;i<rijen.lijst.length;i++){
+			var xml1=XHBeeld();
+			for(var j=0;j<i;j++){xml1.voegSpatieToe();}
+			xml1.voegRijToe(rijen.lijst[i], true);
+			xml.voegToe(xml1.toString());
+		}
+		this.voegToe(xml.toString());
+	}
+	else if(soort=="route"){
+		XmlBeeldMaker.call(this, "", omsluiting, []);
+		var xml=XVBeeld();
+		if(args[1].length==2){
+			var rij0=args[0].geefrij0();
+			var verschilanalyse=args[0].geefVerschilanalyse();
+			if(args[1][0]){
+				xml.voegToe(XHBeeld().voegSpatieToe().voegAnalyseToe(verschilanalyse).toString());
+			}else{
+				xml.voegRijToe(rij0, false);
+				var ea=rij0.geefextraanalyse();
+				if(args[1][1]){xml.voegToe(ea);}
+			}
+		}else{
+			xml.voegRouteToe(args[0],[false, false]);
+			xml.voegRouteToe(args[0],[true, false]);
+		}
+		this.voegToe(xml.toString());
+	}
+	else if(soort=="zoektocht"){
+		if(args[1]){
+			XmlBeeldMaker.call(this, "", omsluiting, []);
+			var xml=XVBeeld();
+			var route1=args[0].geefRoute1();
+			var afbuiging=args[0].geefAfbuiging();
+			if(afbuiging!=null){
+				xml.voegRouteToe(route1, [false, false]);
+				xml.voegStringToe("Laten we naar de "+((args[0].geefLengte()%2==0)?"oneven":"even")+" posities gaan kijken.", true);
+				xml.voegRijToe(afbuiging.geefrij0(), false);
+				if(!afbuiging.isAnalyseOverbodig()){
+					xml.voegToe(XHBeeld().voegSpatieToe().voegAnalyseToe(afbuiging.geefVerschilanalyse()).toString());
+				}
+			}else{
+				var klaar=route1.isAnalyseOverbodig();
+				xml.voegRouteToe(route1, [false, klaar]);
+				if(!klaar){
+					xml.voegRouteToe(route1, [true, false]);
+				}
+			}
+			var suggestie=args[0].geefSuggestie().toString();
+			var s=suggestie.split("=");
+			xml.voegSpatieToe();
+			xml.voegToe(XHBeeld().voegStringToe("De volgende zou "+s[0]+(args[0].geefSuggestie().issoortvan()?"&#8776;":" = "), true).voegGetalToe(args[0].geefSuggestie().geeftotaal(), false).voegStringToe(" kunnen zijn.", true).toString());
+			this.voegToe(xml.toString());
+		}else{
+			XmlBeeldMaker.call(this, "", ["",""], []);
+			var xml=XHBeeld();
+			var lijst=args[0].geefRoute1().geefrij0().elementen();
+			for(var i=0;i<lijst.length;i++){
+				//this.voegToe(["HtmlBeeldMaker", [new HtmlBeeldMaker(["getal", [lijst[i], false]])]]);
+				xml.voegGetalToe(lijst[i], false);
+			}
+			//this.voegToe(["string", [HtmlBeeldMakerStatisch.alsAnalyse("&rarr;")]]);
+			xml.voegStringToe("&rarr;", true);
+			var s=args[0].geefSuggestie().geeftotaal();
+			//this.voegToe(["string", [HtmlBeeldMakerStatisch.SPATIE]]);
+			//this.voegToe(["HtmlBeeldMaker", [new HtmlBeeldMaker(["getal", [s, false]])]]);
+			xml.voegGetalToe(s, false);
+			xml.voegSpatieToe();
+			this.voegToe(xml.toString());
+		}
+	}
+};
+XmlBeeldMaker.prototype.voegEigenschapToe=function(eigenschapNaam, eigenschapWaarde){
+	if(this.omsluiting[0]!=""){
+		var begin=this.omsluiting[0].substring(0,this.omsluiting[0].indexOf(">"))
+		var erbij=eigenschapNaam+"=\""+eigenschapWaarde+"\"";
+		this.omsluiting[0]=begin+" "+erbij+">";
+	}
+	return this;
+};
+XmlBeeldMaker.prototype.voegToe=function(ding){
+	this.dingen.add(ding);
+	return this;
+};
+XmlBeeldMaker.prototype.toString=function(){
+	var s=this.omsluiting[0];
+	for(var i=0;i<this.dingen.lijst.length;i++){
+		s+=this.dingen.lijst[i];
+	}
+	s+=this.omsluiting[1];
+	return s;
+};
+XmlBeeldMaker.prototype.voegStringToe=function(string, analyse){
+	return this.voegToe(XStringBeeld(string, analyse).toString());
+};
+XmlBeeldMaker.prototype.voegGetalToe=function(waarde, verschil){
+	return this.voegToe(XGetalBeeld(waarde, verschil).toString());
+};
+XmlBeeldMaker.prototype.voegRijToe=function(rij, verschil){
+	return this.voegToe(XRijBeeld(rij, verschil).toString());
+};
+XmlBeeldMaker.prototype.voegAnalyseToe=function(analyse){
+	return this.voegToe(XAnalyseBeeld(analyse).toString());
+};
+XmlBeeldMaker.prototype.voegRouteToe=function(route, args){
+	return this.voegToe(XRouteBeeld(route, args).toString());
+};
+XmlBeeldMaker.prototype.voegPijltjeToe=function(){this.dingen.add(XmlBeeldMakerStatisch.PIJLTJE);return this;}
+XmlBeeldMaker.prototype.voegGeenPijltjeToe=function(){this.dingen.add(XmlBeeldMakerStatisch.GEENPIJLTJE);return this;}
+XmlBeeldMaker.prototype.voegSpatieToe=function(){this.dingen.add(XmlBeeldMakerStatisch.SPATIE);return this;}
+var XBeeldMaker=function(soort, omsluiting){
+	return function(args){
+		return new XmlBeeldMaker(soort, omsluiting, args);
+	}
+};
+var XHBeeld=function(){
+	return XBeeldMaker("",["<h>","</h>"])([]);
+};
+var XVBeeld=function(){
+	return XBeeldMaker("",["<v>","</v>"])([]);
+};
+var XStringBeeld=function(string, analyse){
+	return XBeeldMaker("string", ["<string>","</string>"])([string, analyse]);
+};
+var XGetalBeeld=function(waarde, verschil){
+	return XBeeldMaker("getal", ["<getal>","</getal>"])([waarde, verschil]);
+};
+var XRijBeeld=function(rij, verschil){
+	return XBeeldMaker("rij", ["<rij>","</rij>"])([rij, verschil]);
+};
+var XAnalyseBeeld=function(analyse){
+	return XBeeldMaker("analyse", ["<analyse>","</analyse>"])([analyse]);
+};
+var XRouteBeeld=function(route, args){
+	return XBeeldMaker("route",["<route>","</route>"])([route, args]);
+};
+var XZoektochtBeeld=function(zoektocht, groot){
+	return XBeeldMaker("zoektocht",["<zoektocht>","</zoektocht>"])([zoektocht, groot]);
+};
+//------------------------------------------------------------------
+var XmlStringOpdeler=function(tag){
+	this.origineel=tag;
+	//this.grenzen=new ArrayList();
+	this.delen=new ArrayList();
+	this.niveau=0;
+	this.nogOver=tag;
+	this.laatsteTag="";
+	this.laatsteDeel="";
+	this.positie=0;
+	this.o;
+	this.s;
+	while(this.positie<this.origineel.length){
+		this.checkLaatste();
+		this.stapOverVolgende();
+	}
+	this.checkLaatste();
+};
+XmlStringOpdeler.prototype.stapOverVolgende=function(){
+	var naarO=this.nogOver.indexOf(this.o);
+	var naarS=this.nogOver.indexOf(this.s);
+	if(naarO==naarS){
+		if(naarO==-1){this.zetStap(this.nogOver.length);}else{
+			this.zetStap(naarO+this.o.length);
+			this.laatsteTag=this.o;
+		}
+	}else{
+		if(naarO>=0&&(naarS>naarO||naarS==-1)){
+			this.zetStap(naarO+this.o.length);
+			this.laatsteTag=this.o;
+		}
+		else if(naarS>=0&&(naarO>naarS||naarO==-1)){
+			this.zetStap(naarS+this.s.length);
+			this.laatsteTag=this.s;
+		}
+	}
+};
+XmlStringOpdeler.prototype.checkLaatste=function(){
+	if(this.laatsteTag==this.o){this.niveau++;}
+	if(this.laatsteTag==this.s){this.niveau--;}
+	if(this.niveau==0){
+		if(this.positie>0){
+		//this.grenzen.add(this.positie);
+		this.delen.add(this.laatsteDeel);
+		this.laatsteDeel="";}
+		if(this.positie<this.origineel.length){this.zoekTags();}
+	}
+};
+XmlStringOpdeler.prototype.zoekTags=function(){
+	var tagsOver=this.nogOver.match(/<\w+(\s+[^>]*)?>/g);
+	if(tagsOver==null){this.zetStap(this.nogOver.length);}else{
+	var o=tagsOver[0];
+	var s="</"+o.substring(1, o.length-1).split(/\s+/g)[0]+">";
+	if(o.indexOf("/>")!=-1){s=o;}
+	this.o=o;
+	this.s=s;}
+};
+XmlStringOpdeler.prototype.zetStap=function(n){
+	if(this.nogOver.length>0){
+		this.laatsteDeel+=this.nogOver.substring(0,n);
+		this.nogOver=this.nogOver.substring(n);
+		this.positie+=n;
+	}
+};
+
+var HtmlBeeldMaker2Statisch={
+	deelOp: function(tag){
+		return new XmlStringOpdeler(tag).delen.lijst;
+	},
+	pakOmsluiting: function(tag){
+		return tag.match(/^<\w+(\s+[^>]*)?>|<\/\w+>$/g);
+	},
+	pakInhoud: function(tag){
+		return tag.replace(/^<\w+(\s+[^>]*)?>|<\/\w+>$/g, "");
+	},
+	pakWaardeVan: function(tagDelen, eigenschap){
+		var w="";
+		for(var i=0;i<tagDelen.length;i++){
+			var koppel0=tagDelen[i].split(/\=/)[0];
+			if(koppel0==eigenschap){
+				return tagDelen[i].match(/'.*?'|".*?"/g)[0].replace(/['"]/g, "");
+				}
+		}
+		return w;
+	},
+	pakTagDelen: function(omsluiting0){
+		var delen=omsluiting0.substring(1,omsluiting0.length-1).match(/^\w*?\w(?=(?:\s|$))|\w+=(?:'.*?'|".*?")/g);
+		return delen;
+	},
+	ontleding: function(xmlTag){
+		var delen=HtmlBeeldMaker2Statisch.deelOp(xmlTag);
+		if(delen.length==0){return null;}
+		var omsluiting=(delen.length==1)?HtmlBeeldMaker2Statisch.pakOmsluiting(delen[0]):[];
+		if(omsluiting==null){return null;}
+		var manier="";
+		var onsDing=xmlTag;
+		while(delen.length==1&&(omsluiting[0]=="<h>"||omsluiting[0]=="<v>")){
+			manier=omsluiting[0].substring(1, 2);
+			onsDing=onsDing.substring(3, onsDing.length-4);
+		
+			delen=HtmlBeeldMaker2Statisch.deelOp(onsDing);
+			omsluiting=(delen.length==1)?HtmlBeeldMaker2Statisch.pakOmsluiting(delen[0]):[];
+		}
+		return [omsluiting, delen, manier];
+	}
+};
+var HtmlBeeldMaker2=function(xmlTag, nummer){
+	var ontleding=HtmlBeeldMaker2Statisch.ontleding(xmlTag);
+	if(ontleding==null){return xmlTag;}
+	var omsluiting=ontleding[0];
+	var delen=ontleding[1];
+	var manier=ontleding[2];
+	var s="";
+	if(delen.length==1){
+		s=HtmlBeeldMaker2(HtmlBeeldMaker2Statisch.pakInhoud(delen[0]), nummer);
+		var tagdelen=HtmlBeeldMaker2Statisch.pakTagDelen(omsluiting[0]);
+		var pakWaardeVan=function(eigenschap){return HtmlBeeldMaker2Statisch.pakWaardeVan(tagdelen, eigenschap);}
+		var tagnaam=tagdelen[0];
+		if(tagnaam=="spatie"){s="<div class='spatie'></div>";}
+		else if(tagnaam=="pijltje"){s="<div class='plusdiv' align='center'><p class='pijltje'>&#10555;</p></div>";}
+		else if(tagnaam=="geenpijltje"){s="<div class='plusdiv' align='center'>&#x2000</div>";}
+		else if(tagnaam=="string"){
+			var waarde=pakWaardeVan("waarde");
+			var analyse=(pakWaardeVan("analyse")=="true");
+			if(analyse){s="<div class='analysestring'><p class='analyseletter'>"+waarde+"</p></div>";}else{s=waarde;}
+		}
+		else if(tagnaam=="getal"){
+			var waarde=pakWaardeVan("waarde");
+			var klein=waarde.length>3;
+			if(pakWaardeVan("klein")=="true"){klein=true;}
+			s="<div class='getal' align='center'><p class='cijfer'"+(klein?" style='font-size: 15px'":"")+">"+waarde+"</p></div>";
+		}
+		else if(tagnaam=="rij"){
+			var zeker=(pakWaardeVan("zeker")=="true");
+			var lijst=pakWaardeVan("lijst");
+			var lengte=parseInt(pakWaardeVan("lengte"));
+			s="<div class='rij'"+((zeker&&lengte>3)?" style='cursor: pointer' onClick=\"MYAPP.zoeknaar(["+lijst+"])\"":"")+">"+s+"</div>";
+		}
+		else if(tagnaam=="analyse"){s="<div class='analyse'>"+s+"</div>";}
+		else if(tagnaam=="route"){s="<div class='route'>"+s+"</div>";}
+		else if(tagnaam=="zoektocht"){
+			var ns1="<div class='zoektocht' id='zoek"+nummer+"'>";
+			//ns1+="<span class='zijkant' id='zoek"+nummer+"zijkant'><a class='zijkantding' id='zoek"+nummer+"zijkantding0' onClick='MYAPP.verwijder("+nummer+")'>&otimes;</a><a class='zijkantding' id='zoek"+nummer+"zijkantding1' onClick=\"this.style.color='#dfd9cf'; MYAPP.maakTekst("+nummer+"); MYAPP.gaNaarInvoerBlok(); MYAPP.verlaatInvoerBlok()\">&#9998;</a></span>";
+			ns1+="<span onClick='MYAPP.wisselUiterlijk("+nummer+")'><div class='balk' id='zoek"+nummer+"balk'></div></span>";
+			ns1+="<span id='zoek"+nummer+"span'>"
+			var ns2="</span><span id='zoek"+nummer+"tekstspan' style='position: absolute; left:0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 5px; display: none'><textarea class='zoektochttekst' id='zoek"+nummer+"tekst' onBlur=\"document.getElementById('zoek"+nummer+"tekstspan').style.display='none'; document.getElementById('zoek"+nummer+"zijkantding1').style.color='initial'\">emile</textarea></span><span class='zijkant' id='zoek"+nummer+"zijkant'><a class='zijkantding' id='zoek"+nummer+"zijkantding0' onClick='MYAPP.verwijder("+nummer+")'>"+MYAPP.kruisjeSVG+"</a><a class='zijkantding' id='zoek"+nummer+"zijkantding1' onClick=\"this.style.color='#dfd9cf'; MYAPP.maakTekst("+nummer+")\">&#9998;</a></span></div>";
+			s=ns1+s+ns2;
+		}
+		else{
+			s=omsluiting[0]+s+omsluiting[1];
+		}
+	}else{
+		if(manier=="v"){
+			s="<table>";
+			for(var i=0;i<delen.length;i++){s+="<tr><td>"+HtmlBeeldMaker2(delen[i], nummer)+"</td></tr>";}
+			s+="</table>";
+		}else{
+			s="<table><tr>";
+			for(var i=0;i<delen.length;i++){s+="<td>"+HtmlBeeldMaker2(delen[i], nummer)+"</td>";}
+			s+="</tr></table>";
+		}
+	}
+	return s;
+	//for(var i=0;i<delen.length;i++){omsluitingen[i]=delen[i].match(/^<\w+(\s+[^>]*)?>|<\/\w+>$/g);}
+	//if(delen.length==1&&)
+};
+
+var TekstBeeldMaker=function(xmlTag){
+	var ontleding=HtmlBeeldMaker2Statisch.ontleding(xmlTag);
+	if(ontleding==null){return new Beeld().zetNeer(0,0,xmlTag);}
+	var omsluiting=ontleding[0];
+	var delen=ontleding[1];
+	var manier=ontleding[2];
+	var b=new Beeld();
+	if(delen.length==1){
+		var b1=TekstBeeldMaker(HtmlBeeldMaker2Statisch.pakInhoud(delen[0]));
+		var tagdelen=HtmlBeeldMaker2Statisch.pakTagDelen(omsluiting[0]);
+		var pakWaardeVan=function(eigenschap){return HtmlBeeldMaker2Statisch.pakWaardeVan(tagdelen, eigenschap);}
+		var tagnaam=tagdelen[0];
+		if(tagnaam=="spatie"){b.zetNeer(0,0,"  ");}
+		else if(tagnaam=="pijltje"){
+		b.zetNeer(0, 0, "   ");
+		}
+		else if(tagnaam=="geenpijltje"){b.zetNeer(0, 0, "   ");}
+		else if(tagnaam=="string"){
+			var waarde=pakWaardeVan("waarde").replace("&#8776;", "= (ongeveer)");
+			b.zetNeer(0, 0, waarde);
+		}
+		else if(tagnaam=="getal"){
+			var waarde=pakWaardeVan("waarde");
+			var links=Math.floor((4-waarde.length)/2);
+			var rechts=4-waarde.length-links;
+			b.zetNeer(0, 0, MYAPP.spaties(links>=0?links:0)+waarde+MYAPP.spaties(rechts>=0?rechts:0));
+		}
+		else if(tagnaam=="rij"){
+			b.zetBeeldNeer(0,0,b1);
+		}
+		else if(tagnaam=="analyse"){
+			b.zetBeeldNeer(0,0,b1);
+		}
+		else if(tagnaam=="route"){
+			b.zetBeeldNeer(0,0,b1);
+		}
+		else if(tagnaam=="zoektocht"){
+			b.zetBeeldNeer(0,0,b1);
+		}
+	}else{
+		var beelden=[];
+		var maxbreedte=0;
+		var maxhoogte=0;
+		for(var i=0;i<delen.length;i++){
+			beelden[i]=TekstBeeldMaker(delen[i]);
+			var br=beelden[i].breedte();
+			var h=beelden[i].hoogte();
+			if(br>=maxbreedte){maxbreedte=br;}
+			if(h>=maxhoogte){maxhoogte=h;}
+		}
+		if(manier=="v"){
+			var huidigeHoogte=0;
+			for(var i=0;i<delen.length;i++){
+				b.zetBeeldNeer(0, huidigeHoogte, beelden[i]);
+				//b.zetBeeldNeer(Math.floor((maxbreedte-beelden[i].breedte())/2), huidigeHoogte, beelden[i]);
+				huidigeHoogte+=beelden[i].hoogte();
+			}
+		}else{
+			var huidigeBreedte=0;
+			for(var i=0;i<delen.length;i++){
+				b.zetBeeldNeer(huidigeBreedte, Math.floor((maxhoogte-beelden[i].hoogte())/2), beelden[i]);
+				huidigeBreedte+=beelden[i].breedte();
+			}
+		}
+	}
+	return b;
+};
+console.log(typeof "a"=="string");
+//console.log(HtmlBeeldMaker2(s1, 0));
+//console.log(HtmlBeeldMaker2Statisch.deelOp("a"));
+	
+	//var xml=XHBeeld().voegStringToe("a", true).voegGetalToe(2, true).voegGetalToe(3, true).voegToe(XVBeeld().voegGetalToe(4, false).voegGetalToe(5, false).toString());
+	//var xml2=XZoektochtBeeld(new Zoektocht([1, 4, 9, 16, 25]),true);
+	//console.log(xml2.toString());
+	//var pk=new Pluskeer([3, 12, 24, 33, 66]);
+	//MYAPP.schrijf2("pk geeft suggestie s:"+pk.geefsuggestie().toString());
+	//MYAPP.schrijf2("pk is interessant:"+pk.isinteressant());
+	//MYAPP.schrijf2("pk zegt: "+pk.geefcommentaar());
+
+	//var v=new Variant([1, 2, 6, 24, 120], "1/2-2/3=0/1-1/2");
+
+	//MYAPP.schrijf2(v.evalueer(["0/1+0/1", true]));
+
+	//var rij1=new Rij([1, 4, 9, 16, 25]);
+	//var ana1=new Analyse(rij1.elementen());
+	//var rou1=new Route([1, 4, 9, 16]);
+	//var zoe1=new Zoektocht([1, 4, 9, 16, 25]);
+
+
+	//Weergave.schrijfLijst(rij1.elementen()); // REGEL
+	//MYAPP.schrijf2("zoe1, s: "+zoe1.geefSuggestie().toString());
+	//MYAPP.schrijf2(rij1.suggestie().toString());
+	//MYAPP.schrijf2(ana1.geefsuggestie().toString());
+	//MYAPP.schrijf2(rou1.geefSuggestie().toString());
+	//MYAPP.schrijf2(rij1.geefAnalyseString());
+
+
+	//Weergave.schrijfLijst(Weergave.representatie(4, 1));
+	//MYAPP.schrijf(Weergave.bevatnul([1, 2, 0, 4, 5]));
+	//MYAPP.schrijf(Weergave.isheel(3/2));
+	//var al=new ArrayList();
+	//al.add(1);
+	//al.add(2);
+	//al.add("a");
+	//al.add(3);
+	//Weergave.schrijfArrayList(al);
+	//var formule="2*(1+1)+5*(2+2)";
+
+	//Weergave.schrijfLijst(Weergave.stukken(formule));
+	//MYAPP.schrijf2(Weergave.zonderHaakjes(formule));
+
+	//MYAPP.schrijf2(Weergave.verhouding(2/3));
+
+	//Weergave.schrijfLijst(Weergave.verhoudingenlijst(rij1.elementen())); 
+
+	//MYAPP.schrijf2("rij1 constant: "+Weergave.isconstant(rij1.elementen()));
+	//Weergave.schrijfLijst(Weergave.verschillijst(rij1.elementen())); //REGEL 
+	//Weergave.schrijfLijst(Weergave.evenonevenlijst(rij1.elementen())); //REGEL
+	//var s=new Suggestie([2]);
+	//s.doeplus([-1, true]);
+	//s.doekeer(0.4);
+	//var s1=new Suggestie([10]);
+	//s1.voegtoe(s);
+	//MYAPP.schrijf2(s1.toString());
+	//MYAPP.schrijf2(s1.geeftotaal());
+	//var v=new Variant(rij1.elementen(),"0=1");
+	//MYAPP.schrijf2(v.imin);
+	//MYAPP.schrijf2("'0+(0/1)' op de laatste van rij1: "+v.evalueer(["0+(0/1)",true]));
+	//MYAPP.schrijf2("'0=1' op positie 4 van rij1: "+v.falsifieerVoor(4));
+	//MYAPP.schrijf2("'0/1=1/2' op rij1: "+new Variant(rij1.elementen(),"0/1=1/2").falsifieer());
+	//var m1=new Mogelijkheid([rij1.elementen(), "0/1=1/2", "Exponentieel.", "*0/1", false]);
+	//MYAPP.schrijf2("exp zegt: "+m1.commentaar+", s:"+m1.geefsuggestie().toString()); //REGEL
+	//var m2=new Mogelijkheid([rij1.elementen(), "2+1=0", "Fibonacci.", "+f1", true]);
+	//MYAPP.schrijf2("fib zegt: "+m2.commentaar+", s: "+m2.geefsuggestie().toString()); //REGEL
+
+//-------------------
+
+	//MYAPP.schrijf3(HtmlBeeldMakerStatisch.bovenElkaar(al));
+	//MYAPP.schrijf3(HtmlBeeldMakerStatisch.naastElkaar(al));
+
+	//var html1=new HtmlBeeldMaker(["string",["emile"]]).voegToe(["string", ["christian"]]);
+	//html1.voegToe(["string", ["fokkema"]]);
+
+	//var html2=new HtmlBeeldMaker(["string",["rene"]]).voegToe(["string", ["marcel"]]);
+	//html2.voegToe(["string", ["fokkema"]]);
+
+	//var html3=new HtmlBeeldMaker(["getal", [0, true]]);
+
+	//html1.voegToe(["HtmlBeeldMaker",[html2, true]]);
+	//html1.voegToe(["HtmlBeeldMaker",[html3, true]]);
+
+	//var html4=new HtmlBeeldMaker(["rij", [rij1, false]]);
+	//MYAPP.schrijf3(html4.toString(false));
+
+	//var html5=new HtmlBeeldMaker(["analyse", [ana1]]);
+	//MYAPP.schrijf3(html5.toString(true));
+
+	//var html6=new HtmlBeeldMaker(["route", [rou1]]);
+	//MYAPP.schrijf3(html6.toString(true));
+
+
+	//var html7=new HtmlBeeldMaker(["route", [new Route([1, 8, 27, 64])]]);
+	//MYAPP.schrijf3(html7.toString(true));
+
+	//MYAPP.schrijf3(html1.toString(false));
+	//MYAPP.schrijf3(html1.toString(true));
+
+	//var html8=new HtmlBeeldMaker(["zoektocht", [zoe1]]);
+
+	//MYAPP.schrijf3(html8.toString(true));
+
+
+</script>
+</body>
+</html>
